@@ -1,0 +1,415 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>效应空间后台管理</title>
+
+  <meta name="description" content="这是一个form页面">
+  <meta name="keywords" content="form">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+    <style>
+        .am-u-sm-4>select {
+            width:100%;
+        }
+        ul {
+        list-style:none;
+        margin:0;padding:0;
+        }
+    </style>
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<header class="am-topbar admin-header">
+  <div class="am-topbar-brand">
+    <strong>效应空间</strong> <small>后台管理</small>
+  </div>
+
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">5</span></a></li>
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
+          <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
+          <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="am-cf admin-main">
+<!-- sidebar start -->
+<div class="admin-sidebar">
+    <ul class="am-list admin-sidebar-list">
+          <li class="admin-parent"><a href="admin-index.html"><span class="am-icon-home"></span> 首页</a></li>
+
+          <li class="admin-parent"><a href="admin-banner.html"><span class="am-icon-th"></span> 活动管理</a></li>
+
+         
+
+
+      <li><a href="admin-shoplist.html"><span class="am-icon-pie-chart"></span> 店铺管理</a></li>
+      <li><a href="admin-manager.html"><span class="am-icon-group"></span> 人员管理</a></li>
+      <li><a href="admin-cash.html"><span class="am-icon-credit-card"></span> 提现管理</a></li>
+      <li><a href="admin-Coupon.html"><span class="am-icon-tag"></span> 优惠劵管理</a></li>
+
+      <li><a href="admin-couponrecord.html"><span class="am-icon-tags"></span> 优惠劵使用记录</a></li>
+
+
+      <li><a href="admin-prolist.html"><span class="am-icon-photo"></span> 商品管理</a></li>
+          <li class="admin-parent"><a href="admin-log.html"><span class="am-icon-calendar"></span> 系统日志</a></li>
+          <li class="admin-parent"><a href="admin-404.html"><span class="am-icon-bug"></span> 404</a></li>
+
+      <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
+    </ul>
+
+    
+  </div>
+<!-- sidebar end -->
+
+<!-- content start -->
+<div class="admin-content">
+
+  <div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">商品设置</strong> </div>
+  </div>
+
+  <div class="am-tabs am-margin" data-am-tabs>
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="#tab1">基本信息</a></li>
+      <li><a href="#tab2">优惠劵设置</a></li>
+      <li><a href="#tab3">金币设置</a></li>
+    </ul>
+
+    <div class="am-tabs-bd">
+      <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+
+        <form class="am-form">
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              商品标题
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-6">*必填，不可重复</div>
+          </div>
+
+           <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              价格
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+           <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              标数
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+            商品图片
+            </div>
+            <div class="am-u-sm-10">
+        
+       
+              
+                <p>使用本地上传优惠劵图片 </p>
+                  <div class="am-form-group">
+                    <div id="filePicker"> 上传图片</div>
+                          <ul id="images">
+                                <li class='pic' onclick="alt(this);" imgurl="" style='background-image: url(); '></li>
+
+                    </ul>
+              </div>
+            </div>
+        
+         
+
+
+          </div>
+
+          
+
+        
+        </form>
+       
+
+      </div>
+
+      <div class="am-tab-panel am-fade" id="tab2">
+          <button id="add">新增优惠劵</button>
+
+          <ul id="coupons">
+                <li>
+        <div class="am-g am-margin-top">
+          <div class="am-u-sm-2 am-text-right">选择优惠劵</div>
+          <div class="am-u-sm-4">
+            <select>
+              <option value="option1">选项一...</option>
+              <option value="option2">选项二.....</option>
+              <option value="option3">选项三........</option>
+            </select>
+          </div>
+          <div class="am-u-sm-2 am-text-right">数量</div>
+
+              <div class="am-u-sm-4">
+              <input type="text" class="am-input-sm">
+         
+          </div>
+        </div>
+            </li>
+               <li>
+        <div class="am-g am-margin-top">
+          <div class="am-u-sm-2 am-text-right">选择优惠劵</div>
+          <div class="am-u-sm-4">
+            <select>
+              <option value="option1">选项一...</option>
+              <option value="option2">选项二.....</option>
+              <option value="option3">选项三........</option>
+            </select>
+          </div>
+          <div class="am-u-sm-2 am-text-right">数量</div>
+
+              <div class="am-u-sm-4">
+              <input type="text" class="am-input-sm">
+         
+          </div>
+        </div>
+            </li>
+          </ul>
+
+      </div>
+
+      <div class="am-tab-panel am-fade" id="tab3">
+          <button id="add2">新增奖项</button>
+        <form class="am-form">
+            <ul id="coins">
+                <li>
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-2 am-text-right">
+              金币面值(元)
+            </div>
+            <div class="am-u-sm-4 am-u-end">
+              <input type="number" class="am-input-sm">
+            </div>
+                 <div class="am-u-sm-2 am-text-right">
+              金币数量(个)
+            </div>
+            <div class="am-u-sm-4 am-u-end">
+              <input type="number" class="am-input-sm">
+            </div>
+          </div>
+
+                </li>
+            </ul>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="am-margin">
+    <button type="button" class="am-btn am-btn-primary am-btn-xs">提交保存</button>
+    <button type="button" class="am-btn am-btn-primary am-btn-xs">放弃保存</button>
+  </div>
+</div>
+<!-- content end -->
+
+</div>
+
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/polyfill/rem.min.js"></script>
+<script src="assets/js/polyfill/respond.min.js"></script>
+<script src="assets/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/app.js"></script>
+    <script>
+   
+        $("#add").click(function () {
+            var li = '<li>'
+ + '<div class="am-g am-margin-top">'
+    + '<div class="am-u-sm-2 am-text-right">选择优惠劵</div>'
+     + '<div class="am-u-sm-4">'
+      + ' <select>'
+         + '<option value="option1">选项一...</option>'
+        + ' <option value="option2">选项二.....</option>'
+         + '<option value="option3">选项三........</option>'
+     + '  </select>'
+    + ' </div>'
+    + ' <div class="am-u-sm-2 am-text-right">数量</div>'
+
+       + '  <div class="am-u-sm-4">'
+       + '  <input type="text" class="am-input-sm">'
+
+   + '  </div>'
+  + ' </div>'
+      + ' </li>';
+            $("#coupons").append(li);
+
+
+        })
+        $("#add2").click(function () {
+            var li = '  <li>'
+         +' <div class="am-g am-margin-top-sm">'
+           +' <div class="am-u-sm-2 am-text-right">'
+             +' 金币面值(元)'
+            +'</div>'
+          +'  <div class="am-u-sm-4 am-u-end">'
+              +'<input type="text" class="am-input-sm">'
+            +'</div>'
+               +'  <div class="am-u-sm-2 am-text-right">'
+             +' 金币数量(个)'
+          +'  </div>'
+         +'   <div class="am-u-sm-4 am-u-end">'
+              +'<input type="text" class="am-input-sm">'
+           +' </div>'
+         +' </div>'
+
+               +' </li>';
+            $("#coins").append(li);
+
+
+        })
+  
+    </script>
+     <link href="assets/js/webuploader-0.1.5/webuploader.css" rel="stylesheet" />
+    <script src="assets/js/webuploader-0.1.5/webuploader.js"></script>
+    <script>
+        // 初始化Web Uploader
+        var uploader = WebUploader.create({
+            // 选完文件后，是否自动上传。
+            auto: true,
+            // swf文件路径
+            swf: "assets/js/webuploader-0.1.5/Uploader.swf",
+
+            // 文件接收服务端。
+
+            server: '',
+
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: {
+                id: "#filePicker",
+                multiple: false
+            },
+            // 只允许选择图片文件。
+            accept: {
+                title: 'Images',
+                extensions: 'gif,jpg,jpeg,bmp,png',
+                mimeTypes: 'image/*'
+            },
+            compress: {
+                //压缩比例1--100
+                quality: 50,
+            }
+        });
+
+        // 当有文件添加进来的时候
+        uploader.on('fileQueued', function (file) {
+            var $li = $(
+                    '<li id="' + file.id + '"onclick="alt(this);" class="pic thumbnail">' +
+                        '<img>' + '</li>'
+                    ),
+                $img = $li.find('img');
+            // $list为容器jQuery实例
+            $("#images").append($li);
+
+            // 创建缩略图
+            // 如果为非图片文件，可以不用调用此方法。
+            // thumbnailWidth x thumbnailHeight 为 100 x 100
+            var thumbnailWidth = 80;
+            var thumbnailHeight = 80;
+            uploader.makeThumb(file, function (error, src) {
+                if (error) {
+                    $img.replaceWith('<span>不能预览</span>');
+                    return;
+                }
+                $img.attr('src', src);
+            }, thumbnailWidth, thumbnailHeight);
+        });
+
+        //文件开始上传的时候
+        uploader.on('uploadStart', function (file) {
+            $('#' + file.id).addClass("grey");
+        });
+
+        // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+        uploader.on('uploadSuccess', function (file, res) {
+            //res为相应对象  0表示成功
+            if (res.error == 0) {
+                //然后赋值给li标签属性   移除时候用
+                $(".pic:last").attr("imgurl", res.msg)
+                //好像没用
+                //$('#' + file.id).addClass('upload-state-done');
+            }
+            else {
+                //删除此DIV
+                $('#' + file.id).remove();
+                //同时从队列中移除这个文件
+                uploader.removeFile(file);
+                alert("上传失败：" + res.msg);
+            }
+        });
+
+        // 文件上传失败，显示上传出错。
+        uploader.on('uploadError', function (file) {
+            //删除此DIV
+            $('#' + file.id).remove();
+            //同时从队列中移除这个文件
+            uploader.removeFile(file);
+            alert("上传失败");
+        });
+
+        // 完成上传完了，成功或者失败，先删除进度条。
+        uploader.on('uploadComplete', function (file) {
+            $('#' + file.id).removeClass("grey");
+        });
+
+
+    </script>
+</body>
+</html>
