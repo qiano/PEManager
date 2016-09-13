@@ -14,7 +14,13 @@
   <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
   <meta name="apple-mobile-web-app-title" content="Amaze UI" />
   <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="assets/css/kkpager_blue.css"/>
   <link rel="stylesheet" href="assets/css/admin.css">
+    <style>
+        .red {
+            color:red;
+        }
+    </style>
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -53,62 +59,49 @@
   <div class="admin-sidebar">
     <ul class="am-list admin-sidebar-list">
           <li class="admin-parent"><a href="admin-index.html"><span class="am-icon-home"></span> 首页</a></li>
-
           <li class="admin-parent"><a href="admin-banner.html"><span class="am-icon-th"></span> 活动管理</a></li>
-
-         
-
-
       <li><a href="admin-shoplist.html"><span class="am-icon-pie-chart"></span> 店铺管理</a></li>
       <li><a href="admin-manager.html"><span class="am-icon-group"></span> 人员管理</a></li>
       <li><a href="admin-cash.html"><span class="am-icon-credit-card"></span> 提现管理</a></li>
       <li><a href="admin-Coupon.html"><span class="am-icon-tag"></span> 优惠劵管理</a></li>
-
       <li><a href="admin-couponrecord.html"><span class="am-icon-tags"></span> 优惠劵使用记录</a></li>
-
-
       <li><a href="admin-prolist.html"><span class="am-icon-photo"></span> 商品管理</a></li>
           <li class="admin-parent"><a href="admin-log.html"><span class="am-icon-calendar"></span> 系统日志</a></li>
           <li class="admin-parent"><a href="admin-404.html"><span class="am-icon-bug"></span> 404</a></li>
-
       <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
     </ul>
 
     
   </div>
   <!-- sidebar end -->
-
   <!-- content start -->
   <div class="admin-content">
-
     <div class="am-cf am-padding">
       <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">提现列表</strong> </div>
     </div>
-
     <div class="am-g">
       <div class="am-u-md-6 am-cf">
         <div class="am-fl am-cf">
           <div class="am-btn-toolbar am-fl">
             <div class="am-btn-group am-btn-group-xs">
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
+              <button type="button" class="am-btn am-btn-default"><span class="am-icon-file-excel-o"></span> 导出excel</button>
               <!--<button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>-->
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button>
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+              <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核通过</button>
+              <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 审核取消</button>
             </div>
-
-            
           </div>
         </div>
       </div>
       <div class="am-u-md-3 am-cf">
-        <div class="am-fr">
+
+        <!--<div class="am-fr">
           <div class="am-input-group am-input-group-sm">
             <input type="text" class="am-form-field">
                 <span class="am-input-group-btn">
                   <button class="am-btn am-btn-default" type="button">搜索</button>
                 </span>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
 
@@ -129,36 +122,88 @@
                   <th class="table-author">银行账户</th>
                   <th class="table-date">申请日期</th>
                   <th class="table-date">审核日期</th>
+                  <th class="table-date">审核状态</th>
+
 
                   <th class="table-set">操作</th>
               </tr>
           </thead>
           <tbody>
-            <tr>
+              <tr>
               <td><input type="checkbox" /></td>
               <td>1</td>
               <td><a href="#">Business management</a></td>
+                      <td>张三</td>
               <td>2000</td>
-              <td>张三</td>
+              <td>招商银行</td>
+              <td>3212321232123454221</td>
+              <td>2014-01-02 7:28:47</td>
+              <td>2014-01-02 7:28:47</td>
+              <td class="statu red">待审核</td>
+              <td>
+                <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+                    <button class="am-btn am-btn-default am-btn-xs pass"><span class="am-icon-archive"></span> 审核通过</button>
+                    <button class="am-btn am-btn-default am-btn-xs out"><span class="am-icon-archive"></span> 审核取消</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+              <tr>
+              <td><input type="checkbox" /></td>
+              <td>1</td>
+              <td><a href="#">Business management</a></td>
+                     <td>张三</td>
+              <td>2000</td>
+           
               <td>招商银行</td>
 
 
               <td>3212321232123454221</td>
               <td>2014-01-02 7:28:47</td>
               <td>2014-01-02 7:28:47</td>
+              <td class="statu">已审核</td>
+
 
               <td>
                 <div class="am-btn-toolbar">
                   <div class="am-btn-group am-btn-group-xs">
                     <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-archive"></span> 审核通过</button>
+                    <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-archive"></span> 审核取消</button>
+
                   </div>
                 </div>
               </td>
             </tr>
-        
+              <tr>
+              <td><input type="checkbox" /></td>
+              <td>1</td>
+              <td><a href="#">Business management</a></td>
+                           <td>张三</td>
+              <td>2000</td>
+     
+              <td>招商银行</td>
+
+
+              <td>3212321232123454221</td>
+              <td>2014-01-02 7:28:47</td>
+              <td>2014-01-02 7:28:47</td>
+              <td class="statu">已审核</td>
+
+
+              <td>
+                <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+                    <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-archive"></span> 审核通过</button>
+                    <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-archive"></span> 审核取消</button>
+
+                  </div>
+                </div>
+              </td>
+            </tr>
           </tbody>
         </table>
-          <div class="am-cf">
+   <!--       <div class="am-cf">
   共 15 条记录
   <div class="am-fr">
     <ul class="am-pagination">
@@ -171,7 +216,9 @@
       <li><a href="#">»</a></li>
     </ul>
   </div>
-</div>
+</div>-->
+<div id="kkpager"></div>
+
           <hr />
           <p>注：.....</p>
         </form>
@@ -198,7 +245,82 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/kkpager.min.js"></script>
+
+ <script type="text/javascript">
+     function getParameter(name) {
+         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+         var r = window.location.search.substr(1).match(reg);
+         if (r != null) return unescape(r[2]); return null;
+     }
+
+     //init
+     $(function () {
+         var totalPage = 20;
+         var totalRecords = 390;
+         var pageNo = getParameter('pno');
+         if (!pageNo) {
+             pageNo = 1;
+         }
+         //生成分页
+         //有些参数是可选的，比如lang，若不传有默认值
+         kkpager.generPageHtml({
+             pno: pageNo,
+             //总页码
+             total: totalPage,
+             //总数据条数
+             totalRecords: totalRecords,
+             //链接前部
+             hrefFormer: 'admin-cash',
+             //链接尾部
+             hrefLatter: '.html',
+             getLink: function (n) {
+                 return this.hrefFormer + this.hrefLatter + "?pno=" + n;
+             }
+             /*
+             ,lang				: {
+                 firstPageText			: '首页',
+                 firstPageTipText		: '首页',
+                 lastPageText			: '尾页',
+                 lastPageTipText			: '尾页',
+                 prePageText				: '上一页',
+                 prePageTipText			: '上一页',
+                 nextPageText			: '下一页',
+                 nextPageTipText			: '下一页',
+                 totalPageBeforeText		: '共',
+                 totalPageAfterText		: '页',
+                 currPageBeforeText		: '当前第',
+                 currPageAfterText		: '页',
+                 totalInfoSplitStr		: '/',
+                 totalRecordsBeforeText	: '共',
+                 totalRecordsAfterText	: '条数据',
+                 gopageBeforeText		: '&nbsp;转到',
+                 gopageButtonOkText		: '确定',
+                 gopageAfterText			: '页',
+                 buttonTipBeforeText		: '第',
+                 buttonTipAfterText		: '页'
+             }*/
+
+             //,
+             //mode : 'click',//默认值是link，可选link或者click
+             //click : function(n){
+             //	this.selectPage(n);
+             //  return false;
+             //}
+         });
+     });
+</script>
 <!--<![endif]-->
 <script src="assets/js/app.js"></script>
+    <script>
+        $(".tr").click(
+            function () {
+
+
+
+            }
+            );
+       
+    </script>
 </body>
 </html>
